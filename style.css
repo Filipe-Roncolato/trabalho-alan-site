@@ -1,0 +1,206 @@
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("fonts/medio.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("fonts/negrito.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("fonts/extra-negrito.ttf") format("truetype");
+  font-weight: 900;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(225, 100%, 94%);
+  background-image: url("images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  font-family: "Red Hat Display", Arial, sans-serif;
+  color: hsl(223, 47%, 23%);
+}
+
+.card {
+  width: 450px;
+  max-width: 100%;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 24px 30px rgba(56, 42, 225, 0.12);
+}
+
+.capa {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.conteudo {
+  padding: 48px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 35px;
+}
+
+.descricao {
+  max-width: 300px;
+  margin: 16px auto 20px;
+  color: hsl(224, 23%, 55%);
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.plano {
+  display: flex;
+  align-items: center;
+  padding: 25px 24px;
+  border-radius: 12px;
+  background-color: hsl(225, 100%, 98%);
+  text-align: left;
+}
+
+.info-plano {
+  margin-left: 20px;
+}
+
+.info-plano h2 {
+  margin: 0 0 4px;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 22px;
+}
+
+.info-plano p {
+  margin: 0;
+  color: hsl(224, 23%, 55%);
+  font-size: 16px;
+  line-height: 22px;
+}
+
+button {
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.alterar {
+  margin-left: auto;
+  padding: 0;
+  background: none;
+  color: hsl(245, 75%, 52%);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.alterar:hover {
+  color: #766cf1;
+  text-decoration: none;
+}
+
+.pagamento {
+  width: 100%;
+  margin-top: 32px;
+  padding: 15px;
+  border-radius: 11px;
+  background-color: hsl(245, 75%, 52%);
+  color: white;
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 20px;
+  box-shadow: 0 18px 20px rgba(56, 42, 225, 0.22);
+}
+
+.pagamento:hover {
+  background-color: #766cf1;
+}
+
+.cancelar {
+  margin-top: 32px;
+  padding: 0;
+  background: none;
+  color: hsl(224, 23%, 55%);
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 20px;
+}
+
+.cancelar:hover {
+  color: hsl(223, 47%, 23%);
+}
+
+button:focus-visible {
+  outline: 3px solid hsl(223, 47%, 23%);
+  outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+  body {
+    background-image: url("images/pattern-background-mobile.svg");
+  }
+
+  .conteudo {
+    padding: 32px 24px;
+  }
+
+  h1 {
+    font-size: 22px;
+    line-height: 27px;
+  }
+
+  .descricao {
+    margin-bottom: 24px;
+    font-size: 15px;
+  }
+
+  .plano {
+    padding: 16px;
+  }
+
+  .info-plano h2,
+  .info-plano p {
+    font-size: 14px;
+  }
+
+  .alterar {
+    font-size: 13px;
+  }
+
+  .pagamento,
+  .cancelar {
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 350px) {
+  .plano {
+    padding: 16px 12px;
+  }
+
+  .info-plano {
+    margin-left: 10px;
+  }
+}
